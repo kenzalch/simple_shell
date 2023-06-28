@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * add_ln_nd_end - Adds a command line at the end of a line_list.
  * @hd: Head of the linked list.
