@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * error_404 - generates a generic error message for "command not found".
  * @data_sh: data relevant to the shell (counter, arguments).
