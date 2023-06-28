@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * disp_help_cd - Help information for the builtin alias.
  *
