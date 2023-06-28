@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _memcpy - Copies a block of memory from the source
  *           pointer to the destination pointer.
