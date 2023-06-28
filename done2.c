@@ -18,13 +18,13 @@ int exit_sh(shll_comm *datashell)
 		is_d = _isdigit(datashell->args[1]);
 		strl = _strlen(datashell->args[1]);
 		bg_n = ustt > (unsigned int)INT_MAX;
-		if (!is_d || strlen > 10 || bg_n)
+		if (!is_d || strl > 10 || bg_n)
 		{
 			get_err(datashell, 2);
 			datashell->stat = 2;
 			return (1);
 		}
-		datashell->stat = (ustat % 256);
+		datashell->stat = (ustt % 256);
 	}
 	return (0);
 }
@@ -78,7 +78,7 @@ char *err_environ(shll_comm *data_sh)
 	_strcat(er, vtr);
 	_strcat(er, ": ");
 	_strcat(er, data_sh->args[0]);
-	_strcat(er, txt);
+	_strcat(er, txto);
 	_strcat(er, "\0");
 	free(vtr);
 
@@ -142,7 +142,7 @@ char *conc_err_msg(shll_comm *data_sh, char *disp_msg, char *err, char *vstr)
 		ill_flg = malloc(3);
 		ill_flg[0] = '-';
 		ill_flg[1] = data_sh->args[1][1];
-		illegal_flag[2] = '\0';
+		ill_flg[2] = '\0';
 		_strcat(err, ill_flg);
 		free(ill_flg);
 	}

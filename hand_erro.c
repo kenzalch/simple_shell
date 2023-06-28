@@ -43,7 +43,7 @@ char *error_404(shll_comm *data_sh)
 char *err_shell_exit(shll_comm *data_sh)
 {
 	char *errr, *vtr;
-	int leth;
+	int lgth;
 
 	vtr = conv_itoa(data_sh->counter);
 	lgth = _strlen(data_sh->argv[0]) + _strlen(vtr);
@@ -62,7 +62,7 @@ char *err_shell_exit(shll_comm *data_sh)
 	_strcat(errr, ": Illegal number: ");
 	_strcat(errr, data_sh->args[1]);
 	_strcat(errr, "\n\0");
-	free(vstr);
+	free(vtr);
 
 	return (errr);
 }

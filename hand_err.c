@@ -54,8 +54,8 @@ void disp_syn_err(shll_comm *data_sh, char *inp, int index, int boolean)
 
 	mg2 = ": Syntax error: \"";
 	mg3 = "\" unexpected\n";
-	comt = conv_itoa(data_sh->comt);
-	lgth = _strlen(data_sh->argv[0]) + _strlen(counter);
+	comt = conv_itoa(data_sh->counter);
+	lgth = _strlen(data_sh->argv[0]) + _strlen(comt);
 	lgth += _strlen(mg) + _strlen(mg2) + _strlen(mg3) + 2;
 
 	err = malloc(sizeof(char) * (lgth + 1));

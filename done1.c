@@ -22,7 +22,7 @@ char *_whch(char *command, char **_env)
 		idx = 0;
 		while (tkn_way != NULL)
 		{
-			if (check_cdir(way_name, &index))
+			if (check_cdir(way_name, &idx))
 				if (stat(command, &st) == 0)
 					return (command);
 			lgth_dir = _strlen(tkn_way);
@@ -130,7 +130,7 @@ int command_exec(shll_comm *datashell)
 	if (exc == 0)
 	{
 		dyr = _whch(datashell->args[0], datashell->_env);
-		if (check_error_command(dir, datashell) == 1)
+		if (check_error_command(dyr, datashell) == 1)
 			return (1);
 	}
 
@@ -152,7 +152,7 @@ int command_exec(shll_comm *datashell)
 	{
 		do {
 			wpid = waitpid(pim, &ste, WUNTRACED);
-		} while (!WIFEXITED(stte) && !WIFSIGNALED(stte));
+		} while (!WIFEXITED(ste) && !WIFSIGNALED(ste));
 	}
 
 	datashell->stat = ste / 256;
@@ -173,7 +173,7 @@ int is_exec(shll_comm *datashell)
 	char *ip;
 
 	ip = datashell->args[0];
-	for (idx = 0; inp[idx]; idx++)
+	for (idx = 0; ip[idx]; idx++)
 	{
 		if (ip[idx] == '.')
 		{

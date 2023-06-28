@@ -13,7 +13,7 @@ char *replace_str(char *inp, shll_comm *data_shell)
 	r_var *hde, *idx;
 	char *stt, *n_inp;
 
-	stt = conv_itoa(data_shell->stt);
+	stt = conv_itoa(data_shell->stat);
 	hde = NULL;
 
 	oln = verify_vars(&hde, inp, stt, data_shell);
@@ -68,7 +68,7 @@ int _unsetenv(shll_comm *datash)
 	for (m = 0; datash->_env[m]; m++)
 	{
 		vrenv = _strdup(datash->_env[m]);
-		nmenv = _strtok(varenv, "=");
+		nmenv = _strtok(vrenv, "=");
 		if (_strcmp(nmenv, datash->args[1]) == 0)
 		{
 			o = m;

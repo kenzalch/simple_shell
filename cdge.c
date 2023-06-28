@@ -70,7 +70,7 @@ void chandir_dor(shll_comm *data_sh)
 	}
 	c_stok_pwd = c_prtwd;
 	rev_string(c_stok_pwd);
-	c_stok_pwd = _stok(c_stok_pwd, "/");
+	c_stok_pwd = _strtok(c_stok_pwd, "/");
 	if (c_stok_pwd != NULL)
 	{
 		c_stok_pwd = _strtok(NULL, "\0");
@@ -107,7 +107,7 @@ void cd_to_dist(shll_comm *data_sh)
 	getcwd(prtwd, sizeof(prtwd));
 
 	dir = data_sh->args[1];
-	if (chdir(dire) == -1)
+	if (chdir(dir) == -1)
 	{
 		get_err(data_sh, 2);
 		return;
@@ -193,7 +193,7 @@ void changedir_to_home(shll_comm *data_sh)
 		return;
 	}
 
-	if (chdir(home) == -1)
+	if (chdir(hme) == -1)
 	{
 		get_err(data_sh, 2);
 		free(prt_pwd);

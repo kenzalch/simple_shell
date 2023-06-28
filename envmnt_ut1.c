@@ -13,7 +13,7 @@ void verify_env(r_var **hd, char *inp, shll_comm *shell_data)
 	int li, chc, j, lft_vale;
 	char **_envm;
 
-	_envm = shell_data->_envm;
+	_envm = shell_data->_env;
 	for (li = 0; _envm[li]; li++)
 	{
 		for (j = 1, chc = 0; _envm[li][chc]; chc++)
@@ -38,7 +38,7 @@ void verify_env(r_var **hd, char *inp, shll_comm *shell_data)
 			break;
 	}
 
-	add_var_nd(hd, i, NULL, 0);
+	add_var_nd(hd, j, NULL, 0);
 }
 
 /**
