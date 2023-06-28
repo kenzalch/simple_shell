@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * replace_str - Calls functions to replace string into vars.
  * @inp: Input string.
