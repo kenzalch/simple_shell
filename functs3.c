@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _strspn - Calculates the length of the initial segment of a
  *           string that consists of only accepted bytes.
