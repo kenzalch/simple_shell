@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * disp_help_general - Entry point for help information for the help builtin
  *
