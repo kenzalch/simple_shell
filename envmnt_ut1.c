@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * verify_env - Checks if the typed variable is an environment variable.
  * @hd: Head of the linked list.
