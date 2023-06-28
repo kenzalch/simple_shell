@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * changedir_shell - Changes the current directory.
  * @data_sh: Pointer to the data
