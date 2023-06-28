@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * get_environ - Get the value of an environment variable.
  * @envname: Name of the environment variable.
