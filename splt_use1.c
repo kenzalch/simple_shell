@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * move_nxt - Moves to the next command line stored.
  * @lis_s: Separator list.
