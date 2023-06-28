@@ -86,7 +86,7 @@ char *err_gcd(shll_comm *data_sh)
 	}
 	else
 	{
-		ermg= ": can't cd to ";
+		ermg = ": can't cd to ";
 		leid = _strlen(data_sh->args[1]);
 	}
 
