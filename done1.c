@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _whch - Locates a command.
  * @command: Command name.
