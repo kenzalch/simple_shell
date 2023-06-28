@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * get_err - Calls the error message according to the
  *	   builtin, syntax, or permission
