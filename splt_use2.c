@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * splt_ln - Tokenizes the input string.
  * @inp: Input string.
