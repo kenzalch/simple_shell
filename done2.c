@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * exit_sh - Exits the shell
  * @datashell: Data structure containing relevant data
